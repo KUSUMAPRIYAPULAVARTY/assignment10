@@ -145,9 +145,9 @@ https://github.com/KUSUMAPRIYAPULAVARTY/assignment10
 %
  
  \section{QUESTION}
-Let $\vec{A}$ be an $m \times n$ matrix and $\vec{B}$ be an $n \times k$ matrix.Show that the columns of $\vec{C}=\vec{A}\vec{B}$ are linear combinations of columns of $\vec{A}$.If $\alpha_1,\alpha_2,\hdots,\alpha_n$ are the columns of $\vec{A}$ and $\gamma_1,\gamma_2,\hdots,\gamma_k$ are the columns of $\vec{C}$ then,
+Let $\vec{A}$ be an $m \times n$ matrix and $\vec{B}$ be an $n \times k$ matrix.Show that the columns of $\vec{C}=\vec{A}\vec{B}$ are linear combinations of columns of $\vec{A}$.If $\vec{\alpha_1},\vec{\alpha_2},\hdots,\vec{\alpha_n}$ are the columns of $\vec{A}$ and $\vec{\gamma_1},\vec{\gamma_2},\hdots,\vec{\gamma_k}$ are the columns of $\vec{C}$ then,
 \begin{align}
-    \gamma_j= \sum_{r=1}^{n}B_{rj}\alpha_r 
+    \vec{\gamma_j}= \sum_{r=1}^{n}B_{rj}\vec{\alpha_r} 
 \end{align}
 \end{align}
 
@@ -156,24 +156,24 @@ Let $\vec{A}$ be an $m \times n$ matrix and $\vec{B}$ be an $n \times k$ matrix.
 \section{Solution}
 \begin{align}
 \vec{C}=\vec{A}\vec{B}\\
-\vec{C}=\myvec{\gamma_1&\gamma_2&\hdots&\gamma_k}\\
-\vec{A}=\myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\\
-\vec{B}=\myvec{\beta_1&\beta_2&\hdots&\beta_k}\\
+\vec{C}=\myvec{\vec{\gamma_1}&\vec{\gamma_2}&\hdots&\vec{\gamma_k}}\\
+\vec{A}=\myvec{\vec{\alpha_1}&\vec{\alpha_2}&\hdots&\vec{\alpha_n}}\\
+\vec{B}=\myvec{\vec{\beta_1}&\vec{\beta_2}&\hdots&\vec{\beta_k}}\\
 =\myvec{B_{11}&B_{12}&\hdots&B_{1k}\\B_{21}&B_{22}&\hdots&B_{2k}\\\vdots&\vdots&\hdots&\vdots\\B_{n1}&B_{n2}&\hdots&B_{nk}}
 \end{align}
 By matrix multiplication, we can write
 \begin{align}
-  \myvec{\gamma_1&\gamma_2&\hdots&\gamma_k}=\myvec{\vec{A}\beta_1&\vec{A}\beta_2&\hdots&\vec{A}\beta_k}
+  \myvec{\vec{\gamma_1}&\vec{\gamma_2}&\hdots&\vec{\gamma_k}}=\myvec{\vec{A}\vec{\beta_1}&\vec{A}\vec{\beta_2}&\hdots&\vec{A}\vec{\beta_k}}
 \end{align}
-Consider $\gamma_1$
+Consider $\vec{\gamma_1}$
 \begin{align}
-    \gamma_1=\vec{A}\beta_1\\
-    =\myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\myvec{B_{11}\\B_{21}\\\vdots\\B_{n1}}\\=B_{11}\alpha_1+B_{21}\alpha_2+\hdots++B_{n1}\alpha_n
+    \vec{\gamma_1}=\vec{A}\vec{\beta_1}\\
+    =\myvec{\vec{\alpha_1}&\vec{\alpha_2}&\hdots&\vec{\alpha_n}}\myvec{B_{11}\\B_{21}\\\vdots\\B_{n1}}\\=B_{11}\vec{\alpha_1}+B_{21}\vec{\alpha_2}+\hdots+B_{n1}\vec{\alpha_n}
 \end{align}
 Similarly, considering $j^{th}$ column of $\vec{C}$
 \begin{align}
-  \gamma_j= \myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\myvec{B_{1j}\\B_{2j}\\\vdots\\B_{nj}}\\=B_{1j}\alpha_1+B_{2j}\alpha_2+\hdots++B_{nj}\alpha_n \\
-  \implies  \gamma_j= \sum_{r=1}^{n}B_{rj}\alpha_r 
+  \vec{\gamma_j}= \myvec{\vec{\alpha_1}&\vec{\alpha_2}&\hdots&\vec{\alpha_n}}\myvec{B_{1j}\\B_{2j}\\\vdots\\B_{nj}}\\=B_{1j}\vec{\alpha_1}+B_{2j}\vec{\alpha_2}+\hdots+B_{nj}\vec{\alpha_n} \\
+  \implies  \vec{\gamma_j}= \sum_{r=1}^{n}B_{rj}\vec{\alpha_r} 
 \end{align}
 which proves that columns of $\vec{C}$ are linear combinations of columns of $\vec{A}$
 \end{document}
