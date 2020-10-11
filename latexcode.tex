@@ -1,0 +1,180 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 10}
+\author{KUSUMA PRIYA\\EE20MTECH11007}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download codes from 
+%
+\begin{lstlisting}
+https://github.com/KUSUMAPRIYAPULAVARTY/assignment10
+\end{lstlisting}
+%
+ 
+ \section{QUESTION}
+Let $\vec{A}$ be an $m \times n$ matrix and $\vec{B}$ be an $n \times k$ matrix.Show that the columns of $\vec{C}=\vec{A}\vec{B}$ are linear combinations of columns of $\vec{A}$.If $\alpha_1,\alpha_2,\hdots,\alpha_n$ are the columns of $\vec{A}$ and $\gamma_1,\gamma_2,\hdots,\gamma_k$ are the columns of $\vec{C}$ then,
+\begin{align}
+    \gamma_j= \sum_{r=1}^{n}B_{rj}\alpha_r 
+\end{align}
+\end{align}
+
+%
+
+\section{Solution}
+\begin{align}
+\vec{C}=\vec{A}\vec{B}\\
+\vec{C}=\myvec{\gamma_1&\gamma_2&\hdots&\gamma_k}\\
+\vec{A}=\myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\\
+\vec{B}=\myvec{\beta_1&\beta_2&\hdots&\beta_k}\\
+=\myvec{B_{11}&B_{12}&\hdots&B_{1k}\\B_{21}&B_{22}&\hdots&B_{2k}\\\vdots&\vdots&\hdots&\vdots\\B_{n1}&B_{n2}&\hdots&B_{nk}}
+\end{align}
+By matrix multiplication, we can write
+\begin{align}
+  \myvec{\gamma_1&\gamma_2&\hdots&\gamma_k}=\myvec{\vec{A}\beta_1&\vec{A}\beta_2&\hdots&\vec{A}\beta_k}
+\end{align}
+Consider $\gamma_1$
+\begin{align}
+    \gamma_1=\vec{A}\beta_1\\
+    =\myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\myvec{B_{11}\\B_{21}\\\vdots\\B_{n1}}\\=B_{11}\alpha_1+B_{21}\alpha_2+\hdots++B_{n1}\alpha_n
+\end{align}
+Similarly, considering $j^{th}$ column of $\vec{C}$
+\begin{align}
+  \gamma_j= \myvec{\alpha_1&\alpha_2&\hdots&\alpha_n}\myvec{B_{1j}\\B_{2j}\\\vdots\\B_{nj}}\\=B_{1j}\alpha_1+B_{2j}\alpha_2+\hdots++B_{nj}\alpha_n \\
+  \implies  \gamma_j= \sum_{r=1}^{n}B_{rj}\alpha_r 
+\end{align}
+which proves that columns of $\vec{C}$ are linear combinations of columns of $\vec{A}$
+\end{document}
+
